@@ -20,20 +20,6 @@ repositories {
 publishing {
     repositories {
         maven {
-            credentials {
-                def propFile = file("publish.properties")
-                Properties p = new Properties()
-                propFile.withInputStream { stream ->
-                    p.load(stream)
-                }
-                username p.get("username")
-                password p.get("password")
-            }
-            def releaseUrl = "https://packages.aliyun.com/maven/repository/2008850-release-0dxuho/"
-            def snapshotUrl = "https://packages.aliyun.com/maven/repository/2008850-snapshot-zqKbkn/"
-            url version.endsWith("-SNAPSHOT") ? snapshotUrl : releaseUrl
-        }
-        maven {
             def homePath = System.getProperty("user.home")
             url(new File(homePath + File.separator + "mavenRepo").toURI())
         }

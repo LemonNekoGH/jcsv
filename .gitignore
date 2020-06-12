@@ -5,5 +5,3 @@
 
 # Ignore Gradle build output directory
 build
-/jcsv-java/publish.properties
-/jcsv-ktx/publish.properties

@@ -1,0 +1,9 @@
+/jcsv-java/publish.gradle
+.gradle
+/jcsv-java/src/test/resources/test.csv
+/jcsv-java/src/test/resources/test2.csv
+
+# Ignore Gradle build output directory
+build
+/jcsv-java/publish.properties
+/jcsv-ktx/publish.properties

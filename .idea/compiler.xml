@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.8">
+      <module name="jcsv-java" target="1.8" />
+      <module name="jcsv-java.main" target="1.8" />
+      <module name="jcsv-java.test" target="1.8" />
+      <module name="jcsv-ktx" target="1.8" />
+      <module name="jcsv-ktx.main" target="1.8" />
+      <module name="jcsv-ktx.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

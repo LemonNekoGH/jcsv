@@ -4,4 +4,6 @@
 /jcsv-java/src/test/resources/test2.csv
 
 # Ignore Gradle build output directory
+/jcsv-java/build
+/jcsv-ktx/build
 build

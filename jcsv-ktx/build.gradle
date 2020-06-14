@@ -1,5 +1,3 @@
-import java.io.File
-
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.3.71"
@@ -30,6 +28,25 @@ publishing {
         maven {
             url = repoDir.toURI()
         }
+
+        maven {
+            credentials {
+                Properties p = new Properties()
+                file(System.getProperty("user.home") + File.separator + ".publish.properties").withInputStream { input ->
+                    p.load(input)
+                }
+                username = p.getProperty("username")
+                password = p.getProperty("password")
+            }
+            def theUrl
+            if (theVersion.endsWith("SNAPSHOT")) {
+                theUrl = "https://packages.aliyun.com/maven/repository/2008850-snapshot-zqKbkn/"
+            } else {
+                theUrl = "https://packages.aliyun.com/maven/repository/2008850-release-0dxuho/"
+            }
+            url theUrl
+        }
+
         publications {
             publishing.publications.create("maven", MavenPublication) {
                 groupId = "moe.lemonneko"
